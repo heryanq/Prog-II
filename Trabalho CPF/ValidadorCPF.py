@@ -49,6 +49,7 @@ def teste(resultado, esperado):
     print ('{} obtido: {} || esperado: {}'.format(retorna, repr(resultado), repr(esperado)))
 
 def main():
+    # Há testes errados de propósito para verificação de possíveis falhas
     teste(CPF_Valido("820.901.628-80"), True)
     teste(CPF_Valido("820.901.628-80"), False)
     teste(CPF_Valido("539535053-51"), True)
