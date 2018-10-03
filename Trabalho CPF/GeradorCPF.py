@@ -3,6 +3,7 @@
 #Código de validar cpf pode ser encontrado em:  github.com/heryanq/Prog-II/blob/master/validaCPF-fazer.py
 
 from random import randint
+from ValidadorCPF import CPF_Valido
 
 def gerador_cpf():
 
@@ -49,3 +50,18 @@ def gerador_cpf():
     #return cpf[:3] + '.' + cpf[3:6] + '.' + cpf[6:9] + '-' + cpf[9:]
     #return cpf[:9] + '-' + cpf[9:]
     return(cpf)
+
+def teste(resultado,esperado):
+    if resultado == esperado:
+        retorna = 'CPF Válido'
+    else:
+        retorna = 'CPF Inválido'
+    print ('{} obtido: {} || esperado: {}'.format(retorna, repr(resultado), repr(esperado)))
+
+def main():
+    cpf = gerador_cpf()
+    teste(CPF_Valido(cpf), True)
+    teste(CPF_Valido(cpf), False)
+
+if __name__ == '__main__':
+    main()
