@@ -43,23 +43,24 @@ def CPF_Valido(cpf):
 
 def teste(resultado, esperado):
     if resultado == esperado:
-        prefixo = 'Tudo correto ||'
+        retorna = 'Tudo correto ||'
     else:
-        prefixo = 'Algo está errado ||'
-    print ('%s obtido: %s || esperado: %s' % (prefixo, repr(resultado), repr(esperado)))
+        retorna = 'Algo está errado ||'
+    print ('{} obtido: {} || esperado: {}'.format(retorna, repr(resultado), repr(esperado)))
 
 def main():
-    print ('Validador CPF')
     teste(CPF_Valido("820.901.628-80"), True)
+    teste(CPF_Valido("820.901.628-80"), False)
     teste(CPF_Valido("539535053-51"), True)
+    teste(CPF_Valido("539535053-51"), False)
     teste(CPF_Valido("929.103.688.90"), True)
     teste(CPF_Valido("32063930007"), True)
     teste(CPF_Valido("9159308290"), False)
     teste(CPF_Valido(""), False)
     teste(CPF_Valido("00"), False)
     # Ignora erros de digitação se não forem numéricos
-    teste(CPF_Valido("6810182195a3"), True)
     teste(CPF_Valido("681Banininha01821953"), True)
+    teste(CPF_Valido("681Banininha0182953"), False)
     teste(CPF_Valido("233864   X   88897"), True)
     teste(CPF_Valido("233864#@!#$@!$88897"), True)
 
