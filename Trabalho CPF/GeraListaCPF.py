@@ -1,9 +1,9 @@
-from GeradorCPF import geradoraDeCpf #LEMBRA DE DEIXA NO MESMO DIRETORIO
+from GeradorCPF import geradoraDeCpf #LEMBRAR DE DEIXAR NO MESMO DIRETORIO
 from random import randint
 
 def GeradorListaCPF():
 
-    quantidade_cpf = randint(1,9) #ARRUMA ISSO DAQUI VELHOOOOOOOOOO SAM BRABA
+    quantidade_cpf = randint(1,9) #Isso deve ser alterado para lista lista com valores maiores ou uma possivel interação do usario com input
     lista_cpf = []
     while len(lista_cpf) < quantidade_cpf:
         lista_cpf.append(geradoraDeCpf())
