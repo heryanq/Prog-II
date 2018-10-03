@@ -1,6 +1,6 @@
 #Foi reutilizado o código presente no validador de cpf, com algumas alterações nos nomes das variáveis, e foi utilizada a biblioteca random
 
-#Código de validar cpf pode ser encontrado em:  github.com/heryanq/Prog-II/blob/master/validaCPF-fazer.py
+#Código de validar cpf pode ser encontrado em:  github.com/heryanq/Prog-II/blob/master/Trabalho%20CPF/ValidadorCPF.py
 
 from random import randint
 from ValidadorCPF import CPF_Valido
