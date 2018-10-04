@@ -49,6 +49,7 @@ def teste(resultado, esperado):
     print ('{} obtido: {} || esperado: {}'.format(retorna, repr(resultado), repr(esperado)))
 
 def main():
+    # True e False serão trocados por Válido e Inválido dentro do script do kivy
     # Há testes errados de propósito para verificação de possíveis falhas
     teste(CPF_Valido("820.901.628-80"), True)
     teste(CPF_Valido("820.901.628-80"), False)
